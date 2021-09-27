@@ -1,0 +1,274 @@
+:root {
+    --img-bg: #2d2f42;
+    --yellow: #fecb00;
+    --sideber-bg: #202026;
+    --text-bg: #292a30;
+    --white-color: #ffffff;
+    --off-white-color: #cccccc;
+    --text-color: #2d2d2d;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.625rem; /* 1rem = 20px */
+    width: 43.7rem; /* 874px */
+    /* height: 1240px; */
+    /* border: 1px dotted gray; */
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col--gap {
+    margin-right: 10px;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+/**************************************/
+
+.sideber__profile-pic {
+    background-color: var(--img-bg);
+}
+
+.sideber__profile-pic__img {
+    width: 100%;
+    height: 16.35rem;
+}
+
+/*********************/
+
+.sideber__info {
+    background-color: var(--sideber-bg);
+    color: var(--white-color);
+    padding: 2.5rem 0;
+}
+
+.sideber__info__details {
+    margin-bottom: 2.5rem;
+}
+
+.sideber__info__details__education,
+.sideber__info__details__reference {
+    margin-bottom: 2.5rem;
+}
+
+.sideber__info__details__heading {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.sideber__info__details__heading-line {
+    border-width: 0 0 4px 0;
+    border-style: solid;
+    border-color: var(--yellow);
+}
+
+.sideber__info__details__content__title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.sideber__info__details__content__small-title,
+.sideber__info__details__content__desc {
+    margin: 0;
+    font-weight: lighter;
+}
+
+/*********************/
+
+.sideber__info__contact__title--gap {
+    background-color: var(--yellow);
+}
+
+.sideber__info__contact__title {
+    background-color: var(--text-bg);
+    padding: 0 5px;
+}
+
+.sideber__info__contact__title > h3 {
+    margin: 0;
+}
+
+.sideber__info__contact__desc {
+    margin: 5px 0;
+}
+
+.sideber__link {
+    color: var(--off-white-color);
+}
+
+/**************************************/
+
+.content__header {
+    background-color: var(--yellow);
+    /* text-align: center; */
+    margin-top: 2.5rem;
+    padding: 2rem 0;
+}
+
+.content__header__heading-logo {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    color: var(--text-color);
+}
+
+.content__header__heading-qoute {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    color: var(--text-color);
+}
+
+.content__header__heading-logo--bold {
+    font-weight: 700;
+}
+
+/*********************/
+
+.content {
+    margin: 2.5rem 0;
+}
+
+.content__heading {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.content__heading-line {
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: var(--text-color);
+}
+
+.content__about-me {
+    text-align: justify;
+}
+
+/**************************************/
+
+.content__work-exp__content__diff-date {
+    font-weight: normal;
+    color: var(--text-color);
+}
+
+.content__work-exp__content__details__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: var(--text-color);
+}
+
+.content__work-exp__content__details__company {
+    margin: 0;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.content__work-exp__content__details__description {
+    text-align: justify;
+    color: var(--text-color);
+}
+
+/**************************************/
+
+.content__software-skill__content {
+    width: 70%;
+    margin: auto;
+}
+
+.content__software-skill__content__skill {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.content__software-skill__content__bar {
+    height: 3px;
+    background-color: var(--off-white-color);
+}
+
+.content__software-skill__content__bar__progress {
+    width: 70%;
+    margin: 0;
+    border-width: 0 0 3px 0;
+    border-style: solid;
+    border-color: var(--text-color);
+}
