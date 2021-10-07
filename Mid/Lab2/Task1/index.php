@@ -84,7 +84,7 @@ function validate_input($str) {
 
 <head>
     <meta charset="UTF-8">
-    <title>PHP validation</title>
+    <title>Lab 2 Task 1</title>
 
     <style>
         .err {
