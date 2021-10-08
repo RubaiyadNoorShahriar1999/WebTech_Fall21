@@ -55,7 +55,7 @@ if (isset($_POST["submit"])) {
         $gender = validate_input($_POST['gender']);
     }
 
-    // Gender
+    // Degree
     if(!isset($_POST['degree'])) {
         $degree_err = "Degree is required";
     } else if(count($_POST['degree']) < 2) {
