@@ -63,12 +63,12 @@ function validate_input($str)
                 <table>
                     <tr>
                         <td><label for="username">Username:</label></td>
-                        <td><input type="text" name="username" id="username"></td>
+                        <td><input type="text" name="username" id="username" value="<?php echo $username ?>"></td>
                         <td><?php echo $err_username; ?></td>
                     </tr>
                     <tr>
                         <td><label for="password">Password:</label></td>
-                        <td><input type="password" name="password" id="password"></td>
+                        <td><input type="password" name="password" id="password" value="<?php echo $password ?>"></td>
                         <td><?php echo $err_password; ?></td>
                     </tr>
                 </table>
