@@ -11,11 +11,11 @@ $err_retypepass = "";
 
 if (isset($_POST['changepassword'])) {
     // Current Password
-    $__current_password = "abc@1234";
+    define("CURRENT_PASSWORD", "abc@1234");
 
     if (empty($_POST['currentpass'])) {
         $err_currentpass = "<span class=\"error\">Current Password can't be empty</span>";
-    } else if ($_POST['currentpass'] != $__current_password) {
+    } else if ($_POST['currentpass'] != CURRENT_PASSWORD) {
         $err_currentpass = "<span class=\"error\">Current Password is not corrent</span>";
     } else {
         $currentpass = trim($_POST['currentpass']);
