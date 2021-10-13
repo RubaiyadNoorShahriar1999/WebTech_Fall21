@@ -111,7 +111,7 @@ if (isset($_POST['registration'])) {
 
     // Store data in JSON
     if(!$err_has) {
-        // Formate user associative array
+        // Format user associative array
         $user = [
             "name" => $name,
             "email" => $email,
