@@ -1,6 +1,6 @@
 <?php
 
-$err_has = false;
+$has_err = false;
 
 $name = "";
 $err_name = "";
@@ -27,13 +27,13 @@ if (isset($_POST['registration'])) {
     // Name
     if (empty($_POST['name'])) {
         $err_name = "Name is required";
-        $err_has = true;
+        $has_err = true;
     } else if (strlen($_POST['name']) < 2) {
         $err_name = "Name must be greater than 2 character";
-        $err_has = true;
+        $has_err = true;
     } else if (preg_match("/^[a-zA-Z-.]/", $_POST['name']) != 1) {
         $err_name = "Name must be contains alpha character, (.) and (-)";
-        $err_has = true;
+        $has_err = true;
     } else {
         $name = validate_input($_POST['name']);
     }
@@ -41,10 +41,10 @@ if (isset($_POST['registration'])) {
     // Email
     if (empty($_POST['email'])) {
         $err_email = "Email is required";
-        $err_has = true;
+        $has_err = true;
     } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         $err_email = "Email is not valid";
-        $err_has = true;
+        $has_err = true;
     } else {
         $email = validate_input($_POST['email']);
     }
@@ -52,13 +52,13 @@ if (isset($_POST['registration'])) {
     // Username
     if (empty($_POST['username'])) {
         $err_username = "User Name is required";
-        $err_has = true;
+        $has_err = true;
     } else if (strlen(trim($_POST['username'])) < 2) {
         $err_username = "User Name must be lager than 2 character";
-        $err_has = true;
+        $has_err = true;
     } else if (preg_match("/^([a-zA-z0-9_-]*)$/", $_POST['username']) != 1) {
         $err_username = "User Name must be alphanumeric, dash (-) and Underscore (_)";
-        $err_has = true;
+        $has_err = true;
     } else {
         $username = validate_input($_POST['username']);
     }
@@ -66,13 +66,13 @@ if (isset($_POST['registration'])) {
     // Password
     if (empty($_POST['password'])) {
         $err_password = "Password is required";
-        $err_has = true;
+        $has_err = true;
     } else if (strlen(trim($_POST['password'])) < 8) {
         $err_password = "Password must be 8 characters or greater";
-        $err_has = true;
+        $has_err = true;
     } else if (!preg_match("/[@#$%]+/", $_POST['password'])) {
         $err_password = "Password must include special characters (@ # $ %)";
-        $err_has = true;
+        $has_err = true;
     } else {
         $password = trim($_POST['password']);
     }
@@ -80,10 +80,10 @@ if (isset($_POST['registration'])) {
     // Confirm Password
     if (empty($_POST['cpassword'])) {
         $err_cpassword = "Confirm Password is required";
-        $err_has = true;
+        $has_err = true;
     } else if ($_POST['cpassword'] != $_POST['password']) {
         $err_cpassword = "Confirm Password must equal to Password";
-        $err_has = true;
+        $has_err = true;
     } else {
         $cpassword = trim($_POST['cpassword']);
     }
@@ -91,7 +91,7 @@ if (isset($_POST['registration'])) {
     // Gender
     if (empty($_POST['gender'])) {
         $err_gender = "Date of birth is required";
-        $err_has = true;
+        $has_err = true;
     } else {
         $gender = validate_input($_POST['gender']);
     }
@@ -99,10 +99,10 @@ if (isset($_POST['registration'])) {
     // DOB
     if (empty($_POST['dob'])) {
         $err_dob = "Date of birth is required";
-        $err_has = true;
+        $has_err = true;
     } else if (preg_match("/^\d{4}-\d{2}-\d{2}$/", $_POST['dob']) != 1) {
         $err_dob = "Date of birth is not valid";
-        $err_has = true;
+        $has_err = true;
     } else {
         $dob = validate_input($_POST['dob']);
     }
@@ -110,7 +110,7 @@ if (isset($_POST['registration'])) {
     // echo $name, $email, $username, $password, $cpassword, $gender, $dob;
 
     // Store data in JSON
-    if(!$err_has) {
+    if(!$has_err) {
         // Format user associative array
         $user = [
             "name" => $name,
