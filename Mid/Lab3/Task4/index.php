@@ -150,7 +150,7 @@ function validate_input($str)
 
 <head>
     <meta charset="UTF-8">
-    <title>Lab 3 Task 1</title>
+    <title>Lab 3 Task 4</title>
 
     <style>
         table tr td:first-child {
