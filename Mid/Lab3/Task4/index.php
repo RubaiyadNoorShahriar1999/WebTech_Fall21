@@ -90,7 +90,7 @@ if (isset($_POST['registration'])) {
 
     // Gender
     if (empty($_POST['gender'])) {
-        $err_gender = "Date of birth is required";
+        $err_gender = "Gender is required";
         $has_err = true;
     } else {
         $gender = validate_input($_POST['gender']);
