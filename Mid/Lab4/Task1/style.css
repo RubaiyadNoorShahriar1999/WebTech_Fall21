@@ -1,0 +1,200 @@
+/**
+ * Base Style
+ */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.625rem;
+    margin: 1rem;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+
+/**
+ * Header Style
+ */
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    border: 1px solid black;
+}
+
+.header__logo {
+    flex-basis: 25%;
+}
+
+.header__logo > a > img {
+    height: 5rem;
+}
+
+.header__navigation {
+    flex-basis: 75%;
+}
+
+.header__navigation > ul {
+    float: right;
+}
+
+.header__navigation > ul > li {
+    display: inline-block;
+}
+
+.header__navigation > ul > li::after {
+    content: "|";
+    font-size: 1rem;
+}
+
+.header__navigation > ul > li:last-child:after {
+    content: "";
+}
+
+.header__navigation > ul > li > a,
+.header__navigation > ul > li > span {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+}
+
+
+/**
+ * Footer Style
+ */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    border: 1px solid black;
+}
+
+.footer > p {
+    font-size: 1rem;
+}
+
+
+/**
+ * Main Style
+ */
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border: 1px solid black;
+    padding: 1.25rem;
+}
+
+.main__content {
+    flex-basis: 75%;
+    padding: 0.625rem;
+}
+
+
+/**
+ * Aside Style
+ */
+
+.aside {
+    flex-basis: 25%;
+    padding: 0.625rem;
+    font-size: 1rem;
+    border-right: 1px solid black;
+}
+
+.aside__menu ul {
+    padding-left: 1rem;
+    list-style: disc;
+}
+
+
+/**
+ * Registration Style
+ */
+
+
+.main__content--registration table tr td:first-child {
+    text-align: left;
+    width: 11.875rem;
+}
+
+
+/**
+ * View Profile Style
+ */
+
+.main__content--view-profile__container {
+    display: flex;
+}
+
+.main__content--view-profile__details {
+    flex-basis: 75%;
+}
+
+.main__content--view-profile__details table {
+    border-collapse: collapse;
+}
+
+.main__content--view-profile__details table tr {
+    border-bottom: 1pt solid black;
+}
+.main__content--view-profile__details table tr td {
+    padding: 0.625rem;
+}
+
+.main__content--view-profile__details table tr td:first-child {
+    text-align: left;
+    width: 7.875rem;
+}
+
+.main__content--view-profile__profile-pic {
+    flex-basis: 25%;
+}
+
+.main__content--view-profile__profile-pic img {
+    width: 100%;
+}
+
+
+/**
+ * Edit Profile Style
+ */
+
+.main__content--edit-profile form table tr td:first-child {
+    text-align: left;
+    width: 7.875rem;
+}
+
+
+/**
+ * Change Profile Picture Style
+ */
+
+.main__content--change-pp__form fieldset table tr td img {
+    max-width: 500px;
+}
