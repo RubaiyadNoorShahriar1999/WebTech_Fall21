@@ -1,0 +1,4 @@
+body {
+    font-family: 'Lucida Sans Regular', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: calc(0.625rem * 1.6); /* 10px/16px = 0.625 */
+}
