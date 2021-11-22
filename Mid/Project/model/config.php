@@ -7,7 +7,7 @@
 defined("_DIRECT_ACCESS") or exit("<h1>Your are not allowed</h1>");
 
 return [
-    "APP_NAME"      => "Mid/" . basename(dirname(dirname(__FILE__))),
+    "APP_NAME"      => basename(dirname(__FILE__, 2)),
     // "THEME_COLOR"   => ["success", "danger", "warning", "info", "dark"][rand(0,4)],
     "THEME_COLOR"   => "success",
     "EXPIRED"       => 60 * 60 * 24 * 7,    // 60 * 60 * 24 * 7 = 7 days
