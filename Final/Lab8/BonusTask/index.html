@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pig Game</title>
+        <style>
+            *,
+            *::after,
+            *::before {
+                box-sizing: border-box;
+                transition: all 50ms;
+            }
+
+            body {
+                width: 70vw;
+                margin: 0 auto;
+                font-family: Verdana, Tahoma, sans-serif;
+                font-size: 0.625rem;
+                font-weight: bold;
+                color: #2d3436;
+                text-shadow: 0 2px 2px rgb(0, 0, 0, 0.3);
+            }
+
+            main {
+                display: flex;
+                justify-content: space-evenly;
+                padding: 10px 0;
+            }
+
+            header,
+            footer {
+                display: block;
+                background-color: rgba(225, 112, 85, 1);
+                width: 100%;
+                border-radius: 10px;
+                padding: 1rem;
+                color: white;
+                text-align: center;
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.8);
+            }
+
+            section[class*="player-section-"] {
+                border-radius: 10px;
+            }
+
+            .player-section-img {
+                width: 10vw;
+                height: 10vw;
+                border-radius: 10px;
+                margin: auto 10px;
+            }
+
+            .player-section-img span {
+                display: block;
+                width: 10vw;
+                height: 10vw;
+                border-radius: 10px;
+                z-index: 3;
+            }
+
+            section {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
+                text-shadow: 0 2px 2px rgb(0, 0, 0, 0.3);
+            }
+
+            section > div {
+                padding: 10px;
+            }
+
+            section > div:first-child{
+                font-size: 24px;
+                text-align: center;
+            }
+
+            section > div:last-child{
+                font-size: 16px;
+            }
+
+            .player-section-img {
+                flex: 0 0 0;
+            }
+
+            #dice-img {
+                transition: all 200ms ease;
+            }
+
+            button[id*="btn-"] {
+                border-radius: 10px;
+                border: none;
+                outline: 0;
+                padding: 10px 15px;
+                color: #2d3436;
+                font-weight: lighter;
+                background-color: rgba(253, 203, 110,1.0);
+                box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.8);
+                text-shadow: 0 2px 2px rgb(0, 0, 0, 0.3);
+            }
+
+            button[id*="btn-"]:hover {
+                background-color: rgba(253, 203, 110, 0.8);
+            }
+
+            button[id*="btn-"]:active {
+                background-color: rgba(253, 203, 110, 1.0);
+            }
+
+            button[id*="btn-"]:disabled {
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h2 id="winning-score">Winning Score: 100</h2>
+        </header>
+
+        <main>
+            <section class="player-section-0">
+                <div id="player-0"></div>
+                <div>
+                    <div>
+                        <span id="score-title-0">Score:</span>
+                        <span id="score-0"></span>
+                    </div>
+                    <div>
+                        <span id="current-title-0">Current:</span>
+                        <span id="current-0"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="player-section-img">
+                <span id="dice-img"></span>
+            </section>
+
+            <section class="player-section-1">
+                <div id="player-1"></div>
+                <div>
+                    <div>
+                        <span id="score-title-1">Score:</span>
+                        <span id="score-1"></span>
+                    </div>
+                    <div>
+                        <span id="current-title-1">Current:</span>
+                        <span id="current-1"></span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <button id="btn-new">New</button>
+            <button id="btn-roll">Roll</button>
+            <button id="btn-hold">Hold</button>
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+</html>
