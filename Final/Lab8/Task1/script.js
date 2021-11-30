@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gender.addEventListener('change', (e) => {
             // console.log(e.target.value);
             e.preventDefault();
-            validate_gender(e.target.value.trim());
+            validate_gender(genders);
         });
     });
 
@@ -181,20 +181,27 @@ const validate_cpassword = (cpassword, password) => {
     return false;
 }
 
-const validate_gender = (gender) => {
+const validate_gender = (genders) => {
+    const err_gender = document.getElementById("err_gender");
 
-    const err_gender = document.getElementById('err_gender');
+    // console.log(genders);
 
-    if (!gender.checked) {
-        err_gender.innerText = "Gender is required";
-    } else if (!gender.match(/(male|female|other)/g)) {
-        err_gender.innerText = "Gender is not valid";
-    } else {
-        err_gender.innerText = "";
-        return true;
+    for (let i = 0; i < genders.length; ++i) {
+        if (genders[i].checked) {
+            err_gender.innerText = "";
+
+            if (!genders[i].value.trim().match(/(male|female|other)/g)) {
+                err_gender.innerText = "Gender is not valid";
+            } else {
+                err_gender.innerText = "";
+                break;
+            }
+        } else {
+            err_gender.innerText = "Gender is required";
+        }
     }
 
-    return false;
+    return err_gender.innerText.length === 0;
 }
 
 const validate_dob = (dob) => {
