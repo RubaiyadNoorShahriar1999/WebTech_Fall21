@@ -89,7 +89,7 @@ function remember_me_loggedin()
         // return;
 
         if ($user) {
-            $_SESSION['id'] = $user['u_name'];
+            $_SESSION['id'] = $user['u_id'];
             $_SESSION['name'] = $user['u_name'];
             $_SESSION['email'] = $user['u_email'];
             $_SESSION['username'] = $user['u_username'];
