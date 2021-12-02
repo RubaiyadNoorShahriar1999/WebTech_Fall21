@@ -46,9 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     genders.forEach((gender) => {
-        // console.log(e);
-        gender.addEventListener('change', (e) => {
-            // console.log(e.target.value);
+        // console.log(gender);
+        gender.addEventListener("change", (e) => {
             e.preventDefault();
             validate_gender(genders);
         });
@@ -71,9 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         validate_password(password.value.trim());
         validate_cpassword(cpassword.value.trim(), password.value.trim());
 
-        validate_gender(genders[0].value.trim());
-        validate_gender(genders[1].value.trim());
-        validate_gender(genders[2].value.trim());
+        validate_gender(genders);
 
         validate_dob(dob.value.trim());
 
@@ -83,11 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             validate_username(username.value.trim()) &&
             validate_password(password.value.trim()) &&
             validate_cpassword(cpassword.value.trim(), password.value.trim()) &&
-            (
-                validate_gender(genders[0].value.trim()) ||
-                validate_gender(genders[1].value.trim()) ||
-                validate_gender(genders[2].value.trim())
-            ) &&
+            validate_gender(genders) &&
             validate_dob(dob.value.trim())
         ) {
             e.target.submit();
