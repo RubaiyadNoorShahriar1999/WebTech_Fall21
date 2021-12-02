@@ -1,0 +1,52 @@
+body {
+    font-family: "Lucida Sans Regular", "Lucida Sans", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: calc(0.625rem * 1.6); /* 10px/16px = 0.625 */
+}
+
+#dark_mode_1,
+#dark_mode_2 {
+    position: fixed;
+    font-size: larger;
+    bottom: 10px;
+    left: 10px;
+    top: unset;
+    right: unset;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.animate-100 {
+    transition: all 100ms ease !important;
+}
+
+.min-width-400px {
+    min-width: 400px;
+}
+
+@media (max-width: 767.98px) {
+    #dark_mode_1 {
+        display: none;
+    }
+
+    #dark_mode_1,
+    #dark_mode_2 {
+        position: initial;
+        top: 10px;
+        right: 10px;
+        left: unset;
+        bottom: unset;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        font-size: calc(0.625rem * 1.8);
+    }
+}
+
+@media (min-width: 2560px) {
+    body {
+        font-size: calc(0.625rem * 3);
+    }
+}
